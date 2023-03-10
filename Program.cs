@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Cafenea.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<CafeneaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CafeneaContext") ?? throw new InvalidOperationException("Connection string 'CafeneaContext' not found.")));
 
 var app = builder.Build();
 

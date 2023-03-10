@@ -1,0 +1,61 @@
+﻿@page
+@model Cafenea.Pages.Cafele.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Cafea</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cafea.DenumireCafea)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cafea.DenumireCafea)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cafea.TipCafea)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cafea.TipCafea)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cafea.TipBoabe)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cafea.TipBoabe)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cafea.Lapte)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cafea.Lapte)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cafea.Aroma)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cafea.Aroma)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cafea.Topping)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cafea.Topping)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cafea.PretFinal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cafea.PretFinal)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Cafea?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
